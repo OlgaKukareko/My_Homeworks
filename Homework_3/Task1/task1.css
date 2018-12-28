@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: 'Economica', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Economica:700');
+}
+* {
+    box-sizing: bolder-box;
+}
+body {
+    margin: 0 auto;
+    font-family: 'Economica', sans-serif;
+}
+
+#menu1 {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: blueviolet;
+}
+div {
+    width: 100%;
+}
+ul {
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+li {
+    display: inline;
+    list-style: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    tab-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+}
+ul.menu_1 a:hover {
+    background-color: #eee;
+    color: #999;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

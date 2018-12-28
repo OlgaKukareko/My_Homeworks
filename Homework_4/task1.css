@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url('./fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+        font-family: 'Myriad Pro Bold';
+        src: url('./fonts/MyriadPro-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    background-color: #262b2e;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px;
+}
+.page-header-logo {
+    font-family: 'Myriad Pro Regular';
+    display: inline-block;
+    line-height: 1;
+    font-size: 60px;
+    color: #ededed;
+
+}
+.page-header-menu {
+    display: inline-block;
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 200px;
+    list-style-type: none;
+}
+.page-header-menu-item {
+    display: inline-block;
+    
+}
+
+.page-header-menu-link {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #ededed;
+    font-size: 16px;
+    letter-spacing: -0,6px;
+}
+.active {
+    color: #0b8bba;
+}
+.page-header-menu-item::after {
+    content: "--";
+    color: #ededed;
+    font-size: 16px;
+    margin: 5px;
+}
+.page-header-menu-item:last-child::after {
+    content: none;
+}
+.main-heading {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 60px;
+    font-family: 'Myriad Pro Bold';
+    letter-spacing: -2.4px;
+    line-height: 50px;
+    
+}
+.main-heading-highlight {
+    color: #00c2f2;
+}
+.secondary-heading {
+    font-family: 'Myriad Pro Regular';
+    font-size: 50px;
+    letter-spacing: -2px;
+    font-stretch: condensed;
+    color: #bababa;
+}
+.text-info-title {
+    font-size: 35px;
+    font-family: 'Myriad Pro Regular';
+    color: #555555;
+    letter-spacing: -0.6px;
+}
+section {
+    border-bottom: dotted 2px #cccccc;
+    
+}
+.card {
+    display: inline-block;
+    position: relative;
+    background-color: #00aeef;
+    max-width: 285px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 27px;
+    box-shadow: 5px 5px 10px #aaa;
+}
+.card:last-child {
+    margin-right: 0;
+
+}
+.card-description {
+    font-family: 'Arial, Helvetica, sans-serif';
+    font-size: 16px;
+    line-height: 20px;
+    padding:  20px 0;
+    margin-bottom: 50px;
+}
+.card:not(:last-child) {
+    margin-right: 60px;
+}
+.card-heading {
+    font-family: 'Myriad Pro Regular';
+    font-size: 40px;
+    border-bottom: dotted 2px #888;
+}
+.card-button {
+    display: block;
+    position: absolute;
+    max-width: 230px;
+    left: 15%;
+    top: 80%;
+    padding: 5px 25px;
+    background-color: #0076a3;
+    box-shadow: inset 0px 0px 5px #235162;
+    border: solid 1px #235162;
+}
+.link-decorated {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Myriad Pro Regular';
+    font-size: 18px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.link-decorated::after {
+    content: ">>"
+}
+.two-columns-item-heading {
+    font-family: 'Myriad Pro Regular';
+    font-size: 20px;
+    letter-spacing: 0.9px;
+    line-height: 42px;
+}
+.testimonials {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    border-right: dotted 2px #cccccc;
+}
+.testimonial {
+    float: left;
+}
+.testimonial-comment {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 15px;
+    color: #555;
+}
+.testimonial-avatar {
+    position: relative;
+    float: left;
+    padding: 40px;
+    margin: 20px 20px 10px 0;
+    background-color: #cccccc;
+    border: solid 1px #cccccc;
+}
+.testimonial-author {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.testimonial-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+.link,
+.project-link {
+    text-decoration: none;
+    color: #00aeef;
+}
+.projects {
+    width: 50%;
+    display: inline-block;
+    padding-left: 40px;
+}
+.project-title {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   color: #888;  
+}
+.project-img {
+    width: 95%;
+    margin: 20px 0px 10px 0px;
+    box-shadow: 3px 4px 5px 0px #ccc;
+}
+.project-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 20px;
+}
+.project-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+.page-footer {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+.page-footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 0.6px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;

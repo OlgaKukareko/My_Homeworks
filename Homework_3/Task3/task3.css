@@ -1,0 +1,69 @@
+@import url(http://allfont.ru/allfont.css?fonts=impact);
+@import url('https://fonts.googleapis.com/css?family=Economica:700');
+* {
+    box-sizing: border-box;
+}
+header {
+    background-color: #1ca8ff;
+}
+div.menu3 {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+ul.menu_3 {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.menu_3>li {
+   display: inline-block;
+   text-align: center;
+}
+ul.menu_3>li>a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px 15px;
+    font-size: 16px;
+    color: #fff;
+    
+ }
+ ul.city {
+     display: none;
+ }
+ ul.menu_3>li>a:hover {
+    background-color: #ededed;
+    color: #a19fa0;
+ }
+ ul.city {
+     list-style-type: none;
+     position: absolute;
+     background-color: #ededed;
+     top: 100%;
+     left: 0;
+     right: 0;
+ }
+ ul.city>li {
+     display: inline-block;
+     text-align: center;
+    
+ }
+ ul.city>li>a {
+     text-decoration: none;
+     font-family: 'Impact', serif, 
+    display: block;
+    color: #a19fa0;
+    padding: 3px 10px;
+    
+ }
+ .menu_3>li:hover ul.city {
+     display: inline-block;
+ }
+ .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;

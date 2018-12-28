@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Economica', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Economica:700');
+}
+* {
+    box-sizing: border-box;
+}
+header{
+    background-color: blueviolet;
+}
+div {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    float: left;
+}
+a {
+    display: block;
+    font-family: 'Economica, sans-serif';
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+li.menu_more {
+    float: right;
+}
+ a:hover {
+    background-color: #ededed;
+    color: #9e9e9d;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

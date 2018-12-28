@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 400px;
+    margin: 0 auto;
+}
+form {
+    display: inline-block;
+    color: #c7c8c9;
+    text-align: center;
+    background-color: #474c52;
+    border: #474c52 solid 1px ;
+    border-radius: 20px;
+    padding: 20px;
+    letter-spacing: -0,5px;
+    
+}
+div {
+    line-height: 15px;
+    margin: 10px;
+    color: #fff;
+}
+span {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+b {
+    font-size: 14px;
+    font-weight: normal;
+}
+input {
+    width: 80%; 
+    clear: both;
+    background-color: #474c52;
+    border:  #fff solid 1px;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 15px 60px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+}
+input[type="button"] {
+    background-color: #30ab61;
+    border: #30ab61;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+input:focus {
+    border: #30ab61 solid 1px;
+    outline: none;
+}
