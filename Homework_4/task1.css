@@ -10,38 +10,49 @@
         font-weight: normal;
         font-style: normal;
         }
+@media screen and (max-width: 300px) {
+.container {
+    width: 250px;
+    margin: 0 auto;
+}
+}
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
+    padding: 0;
 }
+
 header {
     background-color: #262b2e;
+    padding: 45px 0 35px;
+    overflow: hidden;
 }
+
 .container {
-    max-width: 1100px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 35px;
 }
+
 .page-header-logo {
     font-family: 'Myriad Pro Regular';
-    display: inline-block;
+    display: block;
+    float: left;
     line-height: 1;
-    font-size: 60px;
+    letter-spacing: -2.4px;
+    font-size: 55px;
     color: #ededed;
-
 }
 .page-header-menu {
-    display: inline-block;
-    padding: 0;
-    margin-top: 30px;
-    margin-left: 200px;
+    float: right;
     list-style-type: none;
+    margin: 0;
+    padding-top: 25px;
 }
 .page-header-menu-item {
     display: inline-block;
-    
 }
 
 .page-header-menu-link {
@@ -50,6 +61,7 @@ header {
     color: #ededed;
     font-size: 16px;
     letter-spacing: -0,6px;
+    cursor: pointer;
 }
 .active {
     color: #0b8bba;
@@ -62,6 +74,9 @@ header {
 }
 .page-header-menu-item:last-child::after {
     content: none;
+}
+.heading {
+    padding: 65px 0 30px;
 }
 .main-heading {
     width: 100%;
@@ -82,6 +97,9 @@ header {
     font-stretch: condensed;
     color: #bababa;
 }
+.text-info {
+    padding: 33px 0;
+}
 .text-info-title {
     font-size: 35px;
     font-family: 'Myriad Pro Regular';
@@ -90,59 +108,63 @@ header {
 }
 section {
     border-bottom: dotted 2px #cccccc;
-    
+}
+.cards {
+    padding: 45px 0;
 }
 .card {
-    display: inline-block;
-    position: relative;
+    display: block;
+    float: left;
+    width: 285px;
     background-color: #00aeef;
-    max-width: 285px;
-    margin: 10px;
+    padding: 0 25px 35px;
     text-align: center;
     color: #fff;
-    padding: 27px;
     box-shadow: 5px 5px 10px #aaa;
-}
-.card:last-child {
-    margin-right: 0;
-
+    margin-bottom: 10px;
 }
 .card-description {
-    font-family: 'Arial, Helvetica, sans-serif';
+    font-family: 'Arial';
     font-size: 16px;
-    line-height: 20px;
-    padding:  20px 0;
-    margin-bottom: 50px;
+    line-height: 1.5;
+    padding:  25px 0 30px;
 }
 .card:not(:last-child) {
-    margin-right: 60px;
+    margin-right: 50px;
 }
 .card-heading {
     font-family: 'Myriad Pro Regular';
+    padding: 30px 0 15px;
+    line-height: 1;
     font-size: 40px;
-    border-bottom: dotted 2px #888;
+    letter-spacing: -1.6px;
+    border-bottom: dotted 2px #fff;
 }
 .card-button {
     display: block;
-    position: absolute;
-    max-width: 230px;
-    left: 15%;
-    top: 80%;
-    padding: 5px 25px;
+    width: 100%;
+    padding: 10px;
     background-color: #0076a3;
     box-shadow: inset 0px 0px 5px #235162;
     border: solid 1px #235162;
+    cursor: pointer;
 }
 .link-decorated {
     text-decoration: none;
     color: #fff;
     font-family: 'Myriad Pro Regular';
-    font-size: 18px;
-    letter-spacing: -1px;
+    font-size: 16px;
+    letter-spacing: -0.7px;
+    line-height: 1;
     text-transform: uppercase;
 }
 .link-decorated::after {
-    content: ">>"
+    content: ">>";
+    display: inline-block;
+    margin-left: 5px;
+}
+.two-columns {
+    padding: 35px 0;
 }
 .two-columns-item-heading {
     font-family: 'Myriad Pro Regular';
@@ -216,6 +238,7 @@ section {
     line-height: 20px;
 }
 .page-footer {
+    padding: 20px 0 20px;
     display: inline-block;
     float: left;
     width: 100%;
@@ -229,4 +252,5 @@ section {
 .clearfix::after {
     content: "";
     clear: both;
-    display: table;
+    display: block;
+}
