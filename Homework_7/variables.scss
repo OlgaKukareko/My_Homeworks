@@ -1,0 +1,12 @@
+$Gotham_Pro: 'GothamPro';
+$Lato: 'Lato';
+$Open_Sans: 'Open Sans';
+$FontAwesome: 'FontAwesome';
+$Lato_Bold: 'LatoBold';
+$heading-color:#fff;
+$heading-color_2:#eeba4d;
+$heading-color_3: #7e9cc7;
+@function vw_size($size) {
+    $screen: 1276;
+    @return ($size/$screen)*100vw;
+}
