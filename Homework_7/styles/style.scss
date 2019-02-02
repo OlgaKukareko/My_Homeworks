@@ -33,16 +33,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-// @font-face {
-//     font-family: $FontAwesome;
-//     src:
-//       url('./../fonts/SAwesome/FontAwesome.ttf') format('truetype'),
-//       url('./../fonts/SAwesome/FontAwesome.woff') format('woff'),
-//       url('./../fonts/SAwesome/FontAwesome.svg') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-//   }
-
 
 body {
     margin: 0;
@@ -61,11 +51,17 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 22px 0;
-}
 
-.page-header__logo {
-    margin: 0;
-    padding: 0;
+    &__logo {
+        margin: 0;
+        padding: 0;
+    }
+    
+    @include scale(900) {
+        &__logo {
+            margin-right: 23px;
+        }
+    }
 }
 
 .logo {
@@ -334,6 +330,7 @@ body {
         }
 
         &-item {
+            display: inline-flex;
             max-width: 50%;
         }
     }
@@ -341,9 +338,10 @@ body {
     @include scale(470) {
         &__row {
             flex-direction: column;
+            align-items: stretch;
 
             &-item {
-                max-width: 100%;
+                width: 100%;
 
                 & + & {
                     margin-top: vw_size(79);
@@ -468,7 +466,7 @@ body {
             flex-wrap: wrap;
             flex-direction: column;
             align-self: center;
-
+            
             &_plan {
 
                 & + & {
@@ -495,14 +493,16 @@ body {
     border: 1px solid #ccd5df;
     width: 391px;
 
+    @include scale(300) {
+       width: 100%;
+    }
+
         
     &_prime {
         z-index: 2;
         background-color: $heading-color_3;
         padding: 85px 33px 80px;
-        width: 395px;
         border-color: transparent;
-        margin: 0 -1px;
 
         #{$self}__name,
         #{$self}__currency,
@@ -609,7 +609,6 @@ body {
             left: 0;
             top: 10px;
             transform: translate(-75%,10%);
-
         }
 
         &:nth-child(3)::before {
@@ -623,15 +622,26 @@ body {
 
         }
 
-        
-
         &-image {
             padding-top: 35px;
-            
         }
 
         &:not(:last-child) {
             margin-right: vw_size(87);
+        }
+
+        @include scale(670) {
+            &:nth-child(even)::before {
+                content: "";
+               display: none;
+            }
+            &:nth-child(3)::before {
+                content: "";
+                display: none;
+    
+            }
+    
+    
         }
     }
 
@@ -759,6 +769,12 @@ body {
         }
            
     }
+    @include scale(300) {
+        &__comment {
+            flex-direction: column;
+        }
+    }
+
 
     @include scale(1040) {
 
@@ -901,10 +917,11 @@ body {
          margin-top: 5px;
      }
  }
+
  .social {
     &-wrapper {
         padding-top: vw_size(25);
-        padding-bottom: vw_size(98);
+        padding-bottom: vw_size(52);
     }
 
     &_link {
@@ -920,4 +937,14 @@ body {
             color: $heading-color_2;
         }
     }
- }
+}
+.footer {
+    padding-top: 17px;
+    padding-bottom: 19px;
+    background-color: $heading-color_3;
+
+    &__wrapper {
+        color: $heading-color;
+        font-size: 13px;
+    }
+}
