@@ -4,44 +4,44 @@
   }
 
 @font-face {
-	font-family: '$Gotham_Pro';
+	font-family: $Gotham_Pro;
 	src: url('./../fonts/GothamPro/GothamPro-Black.woff') format('woff');
         font-weight: bold;
         font-style: normal;
 }
 @font-face {
-    font-family: '$Lato';
+    font-family: $Lato;
     src: url('./../fonts/Lato/Lato-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: '$Lato_Bold';
+    font-family: $Lato_Bold;
     src: url('./../fonts/Lato/Lato-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
-    font-family: '$Lato_light';
+    font-family: $Lato_light;
     src: url('./../fonts/Lato/Lato-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-	font-family: '$Open_Sans';
+	font-family: $Open_Sans;
 	src: url('./../fonts/OpenSans/OpenSans-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
-@font-face {
-    font-family: '$FontAwesome';
-    src:
-      url('./../fonts/SAwesome/FontAwesome.ttf') format('truetype'),
-      url('./../fonts/SAwesome/FontAwesome.woff') format('woff'),
-      url('./../fonts/SAwesome/FontAwesome.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+// @font-face {
+//     font-family: $FontAwesome;
+//     src:
+//       url('./../fonts/SAwesome/FontAwesome.ttf') format('truetype'),
+//       url('./../fonts/SAwesome/FontAwesome.woff') format('woff'),
+//       url('./../fonts/SAwesome/FontAwesome.svg') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//   }
 
 
 body {
@@ -92,11 +92,11 @@ body {
         line-height: 1;
         color: $color_text;
         
+        &:hover  {
+            background-color: #eeba4d;
+            color: white;
+        }
     }
-}
-.nav_menu__link:hover  {
-    background-color: #eeba4d;
-    color: white;
 }
 /*Connection*/
 .section-heading {
@@ -570,7 +570,6 @@ body {
 
 /*section Works*/
 .work {
-    position: relative;
     
     &__content {
         padding-top: vw_size(155);
@@ -582,27 +581,53 @@ body {
     }
 
     &__steps {
-        display: flex;
+        display: inline-flex;
+
+          @include scale(770) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-self: center;
+
+        &__step:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+        
     }
 
     &__step {
         position: relative;
-        width: 213px;
-        padding-top: 199px;
         text-align: center;
         margin-bottom: vw_size(91);
-        z-index: 1;
 
-        &-image {
-            padding-top: 0;
-            
+        &:nth-child(even)::before {
+            content: "";
+            background: url(./../images/Arrow_1.png) no-repeat 100%;
+            width: 128px;
+            height: 33px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            transform: translate(-75%,10%);
+
         }
 
-        &_next {
+        &:nth-child(3)::before {
+            content: "";
+            background: url(./../images/Arrow_1.png) no-repeat 100%;
+            width: 128px;
+            height: 33px;
             position: absolute;
-            top: 289px;
-            z-index: 2;
+            left: 0;
+            transform: translate(-75%,265%) scale(1,-1);
 
+        }
+
+        
+
+        &-image {
+            padding-top: 35px;
+            
         }
 
         &:not(:last-child) {
@@ -614,6 +639,12 @@ body {
         font-size: 72px;
         color: $heading-color_3;
     }
+    @include scale(770) {
+
+        &__step:not(:last-child) {
+            margin-right: 0;
+        }
+    }
 }
 .step_info {
 
@@ -622,14 +653,18 @@ body {
         font-family: $Lato_Bold;
         text-transform: uppercase;
         margin-bottom: 28px;
+        margin-top: vw_size(102);
     }
 
     &__text {
         font-size: 13px;
         line-height: 22px;
     }
+
+    
 }
 
+/*section review*/
 .review {
     background-color: $heading-color_2;
 
@@ -733,7 +768,7 @@ body {
 
     }
 }
-
+/*section feedback*/
 .feedback {
 
     &-content {
@@ -762,20 +797,18 @@ body {
     }
 
     &__address {
-        width: 292px;
+        width: 279px;
         color: $heading-color;
         display: flex;
         flex-direction: column;
         align-self: center;
-        position: relative;
 
         &_triangle {
             position: absolute;
-            bottom: 0;
-            left: 50%;
+            bottom: -145px;
+            left: 0;
         }
        
-
         &_location {
             border-radius: 50%;
             background: #414c51;
@@ -784,7 +817,8 @@ body {
             line-height: 24px;
             display: flex;
             flex-direction: column;
-
+            position: relative;
+            margin-bottom: 20px;
         }
 
         &_title {
@@ -802,7 +836,88 @@ body {
             color: $heading-color_2;
         }
     }
+    &_logo {
+        display: flex;
+        align-self: center;
+    }
+
+    @include scale(560) {
+        &_item {
+            flex-direction: column;
+            align-self: center;
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        &__map {
+            background-size: 100%
+        }    
+        &_form {
+            flex-direction: column;
+            align-self: center;
+
+            &_line {
+                flex-direction: column;
+                align-self: center;
+            }
+        }    
+    }
 }
 
+/*section navigation 2*/
+ .navigation {
+     &_wrapper {
+         padding-top: vw_size(68);
+         padding-bottom: vw_size(29);
+     }
+     &_link {
+         &:hover {
+             background-color: white;
+             color: $heading-color_2;
+             text-decoration: underline;
+         }
+     }
+ }
+ /*section namber*/
+ .namber {
+     &_wrapper {
+         margin-bottom: 24px;
+         padding-top: 0;
+         color: $color_text;
 
+         &:hover {
+             color: $heading-color_2
+         }
 
+     }
+     &_phone {
+         font-size: 23px;
+         display: inline-flex;
+         line-height: 24.15px;
+         font-family: $Lato;
+     }
+     &_icon {
+         font-size: 20px;
+         margin-right: 7px;
+         margin-top: 5px;
+     }
+ }
+ .social {
+    &-wrapper {
+        padding-top: vw_size(25);
+        padding-bottom: vw_size(98);
+    }
+
+    &_link {
+        text-decoration: none;
+        color: $heading-color_3;
+        font-size: 18px;
+         
+        &:not(:last-child) {
+            margin-right: 17px;
+        }
+
+        &:hover {
+            color: $heading-color_2;
+        }
+    }
+ }
