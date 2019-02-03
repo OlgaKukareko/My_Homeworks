@@ -330,12 +330,12 @@ body {
         }
 
         &-item {
-            display: inline-flex;
-            max-width: 50%;
+            display: flex;
+            width: 50%;
         }
     }
 
-    @include scale(470) {
+    @include scale(490) {
         &__row {
             flex-direction: column;
             align-items: stretch;
@@ -353,7 +353,6 @@ body {
 
 
 .service {
-    max-width: 50%;
     display: flex;
     position: relative;
     padding-left: 82px;
@@ -493,7 +492,7 @@ body {
     border: 1px solid #ccd5df;
     width: 391px;
 
-    @include scale(300) {
+    @include scale(400) {
        width: 100%;
     }
 
@@ -581,11 +580,11 @@ body {
     }
 
     &__steps {
-        display: inline-flex;
+        display: flex;
+        margin-bottom: vw_size(91);
 
           @include scale(770) {
         flex-wrap: wrap;
-        flex-direction: column;
         align-self: center;
 
         &__step:not(:last-child) {
@@ -598,39 +597,44 @@ body {
     &__step {
         position: relative;
         text-align: center;
-        margin-bottom: vw_size(91);
+        padding: 0 15px;
+        
 
         &:nth-child(even)::before {
             content: "";
-            background: url(./../images/Arrow_1.png) no-repeat 100%;
-            width: 128px;
-            height: 33px;
+            background: url(./../images/Arrow_1.png) no-repeat;
+            background-size: contain;
+            width: vw_size(128);
+            height: vw_size(33);
             position: absolute;
             left: 0;
-            top: 10px;
-            transform: translate(-75%,10%);
+            top: 0;
+            transform: translateX(-50%);
         }
 
-        &:nth-child(3)::before {
+        &:nth-child(2n+3)::before {
             content: "";
-            background: url(./../images/Arrow_1.png) no-repeat 100%;
-            width: 128px;
-            height: 33px;
+            background: url(./../images/Arrow_1.png) no-repeat;
+            background-size: contain;
+            width: vw_size(128);
+            height: vw_size(33);
             position: absolute;
             left: 0;
-            transform: translate(-75%,265%) scale(1,-1);
+            top: 25%;
+            transform: translate(-50%,-15%) scale(1,-1);
 
         }
 
         &-image {
-            padding-top: 35px;
+            display: inline-flex;
+            padding: vw_size(55);
+            margin-bottom: 15px;
         }
 
-        &:not(:last-child) {
-            margin-right: vw_size(87);
-        }
-
-        @include scale(670) {
+        @include scale(770) {
+            flex-wrap: wrap;
+            width: 50%;
+            margin-bottom: 20px;
             &:nth-child(even)::before {
                 content: "";
                display: none;
@@ -638,10 +642,7 @@ body {
             &:nth-child(3)::before {
                 content: "";
                 display: none;
-    
             }
-    
-    
         }
     }
 
@@ -650,10 +651,7 @@ body {
         color: $heading-color_3;
     }
     @include scale(770) {
-
-        &__step:not(:last-child) {
-            margin-right: 0;
-        }
+        flex-wrap: wrap;
     }
 }
 .step_info {
@@ -663,7 +661,6 @@ body {
         font-family: $Lato_Bold;
         text-transform: uppercase;
         margin-bottom: 28px;
-        margin-top: vw_size(102);
     }
 
     &__text {
@@ -701,7 +698,8 @@ body {
         }
     }
     &__comment {
-        display: inline-flex;
+        display: flex;
+        
         background-color: $heading-color;
         text-align: left;
         padding: 51px 35px 51px 30px;
@@ -711,24 +709,31 @@ body {
         }
 
         &_avatar {
-            margin-right: 13px;
+            margin-right: 31px;
         }
 
         &_text {
+            position: relative;
             margin-bottom: 29px;
             font-size: 13px;
             line-height: 22px;
         
             &:before {
                 content: "\201c";
+                font-family: 'Times New Roman', Times, serif;
                 margin-right: 7px;
                 font-size: 25px;
+                position: absolute;
+                transform: translate(-100%,-20%);
+                left: 0;
             }
             &:after {
                 content: "\201C";
+                font-family: 'Times New Roman', Times, serif;
+                position: absolute;
                 margin-left: 13px;
                 font-size: 25px;
-                transform: translateY(10px);
+                transform: translateY(50%) scale(-1,1);
             }
         }
 
@@ -757,7 +762,7 @@ body {
 
         &__comment {
             margin-right: 0;
-            align-items: stretch;
+            align-items: center;
 
             &:not(:last-child) {
                 margin-right: 0;
@@ -769,7 +774,7 @@ body {
         }
            
     }
-    @include scale(300) {
+    @include scale(350) {
         &__comment {
             flex-direction: column;
         }
@@ -803,38 +808,37 @@ body {
     }
 
     &__map {
-        background: url(./../images/Layer_13.png) no-repeat 100%;
+        background: url(./../images/Layer_13.png) no-repeat center center;
         padding-top: vw_size(40);
         padding-bottom: vw_size(220);
         border-bottom: #e3e6eb solid 1px;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
+        
     }
 
     &__address {
-        width: 279px;
-        color: $heading-color;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-
-        &_triangle {
-            position: absolute;
-            bottom: -145px;
-            left: 0;
-        }
-       
+        
         &_location {
+            display: inline-block;
+            padding: 70px;
             border-radius: 50%;
             background: #414c51;
-            padding: 65px 68px;
-            text-align: center;
-            line-height: 24px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
             margin-bottom: 20px;
+            color: $heading-color;
+            position: relative;
+            
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%,70%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 17.3px 10px 0 10px;
+                border-color: #414c51 transparent transparent transparent;
+            }
         }
 
         &_title {
@@ -853,8 +857,7 @@ body {
         }
     }
     &_logo {
-        display: flex;
-        align-self: center;
+        margin: 0 auto;
     }
 
     @include scale(560) {
@@ -863,9 +866,6 @@ body {
             align-self: center;
             margin-bottom: 10px;
             margin-right: 0;
-        }
-        &__map {
-            background-size: 100%
         }    
         &_form {
             flex-direction: column;
