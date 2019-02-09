@@ -1,0 +1,21 @@
+$Roboto: 'Roboto';
+$Source_Sans: 'Source Sans Pro';
+$Source_Sans_Black: 'Source Sans Pro Black';
+$Open_Sans: 'Open Sans Regular';
+$big_john: 'Big John';
+$Open_Sans_bold: 'Open Sans Bold';
+
+@function vw($size) {
+    $test_screen_client_height: 1280;
+
+    @return ($size/$test_screen_client_height)*100vw;
+}
+
+$color_menu: #fff;
+
+
+$color_text: #fff;
+$color_text_2: #333b46;
+
+
+$background_color:#19bd9a;

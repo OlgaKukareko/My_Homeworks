@@ -1,0 +1,254 @@
+@import "./variables.scss";
+
+font-face {
+    font-family: $Roboto;
+    src: local('Roboto'), local('Roboto-Regular'),
+      url('./../fonts/Roboto.woff') format('woff'), 
+      url('./../fonts/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $Source_Sans;
+    src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+        url('./../fonts/sourcesanspro.woff') format('woff'),
+        url('./../fonts/sourcesanspro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: $Source_Sans_Black;
+    src: local('Source Sans Pro Black'), local('SourceSansPro-Black'),
+      url('./../fonts/sourcesansproblack.woff') format('woff'),
+       url('./../fonts/sourcesansproblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+	font-family: $Open_Sans;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+		url('./../fonts/OpenSans-Regular.woff') format('woff'),
+		url('./../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $Open_Sans_bold;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+		url('./../fonts/OpenSans-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $big_john;
+    src: 
+		url('./../fonts/BIG_JOHN.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $Open_Sans;
+}
+.container {
+    max-width: 1170px;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+
+.page_header {
+    background: url(./../Images/Layer_1.jpg) no-repeat 100%;
+    padding-top: 40px;
+
+
+
+        &__logo {
+            font-family: $big_john;
+            font-size: 25px;
+            color: $color_menu;
+        }
+        &__nav_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__content {
+            padding-top: vw(221);
+            padding-bottom: vw(77);
+            text-align: center;
+        }
+        &__heading {
+            color: $color_text;
+            margin-bottom: vw(220);
+
+            &_main {
+                font-family: $Source_Sans;
+                font-size: 35px;
+                text-transform: uppercase;
+                letter-spacing: 7px;
+                line-height: 70px;
+                margin-bottom: vw(43);
+            }
+
+            &_secondary {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+                line-height: 28px;
+            }
+        }
+        &__icon {
+            border-radius: 50%;
+            background-color: $background_color;
+            padding: 7px;
+            width: 36px;
+            margin: 0 auto;
+            cursor: pointer;
+        }  
+}
+.icon {
+    fill: #fff;
+    stroke: inherit;
+    stroke-width: inherit;
+    width: 12px;
+    height: 12px;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+
+    &_item {
+        list-style-type: none;
+        padding: 9px 22px;
+
+        &:hover {
+            border-radius: 25px;
+            border: $color_menu solid 1px;
+        }
+    }
+    &_link {
+        text-decoration: none;
+        color: $color_menu;
+        font-size: 16px;
+    }
+}
+.section-heading {
+    text-align: center;
+    &__main {
+        font-family: $Source_Sans;
+        font-size: 20px;
+        letter-spacing: 4px;
+        line-height: 12px;
+        margin-bottom: vw(41);
+        color: $color_text_2;
+        text-transform: uppercase;
+    }
+    &__secondary {
+        font-family: $Open_Sans;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        line-height: 25px;
+        color: $color_text_2;
+    }
+    &_light {
+        color: $color_text;
+    }
+    &_left {
+        text-align: left;
+    }
+
+}
+
+.slider {
+    &_content {
+        display: flex;
+        padding-left: vw(57);
+        padding-top: vw(114);
+        padding-bottom: vw(101);
+        position: relative;
+        justify-content: flex-start;
+    }
+    &-heading {
+        width: 50%;
+    }
+    &-main {
+        margin-bottom: 49px;
+    }
+    &-text {
+        margin-bottom: vw(33);
+    }
+    &__images {
+        position: relative;
+        width: 50%;
+        min-height: 100%;
+        cursor: pointer;
+
+        &_first {
+            background-image: url(./../Images/IPAD.png);
+        }
+
+        &_second {
+            background-image: url(./../Images/Smart_Cover.png);
+        }
+        &_third {
+            background-image: url(./../Images/iMac.png);
+        }
+    
+    }
+
+    
+   
+
+}
+.submit {
+    border-radius: 19px;
+    border: 1px solid #333b46;
+    padding: 12px 30px;
+    font-size: 16px;
+    line-height: 12px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.about {
+    background-color: #f3f3f3;
+    &__content {
+       
+        padding: vw(80) vw(133) vw(101) vw(71);
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &_text {
+            display: flex;
+            font-size: 16px;
+            letter-spacing: 0.8px;
+            line-height: 28px;
+
+            &:first-child {
+                margin-right: 129px;
+            }
+        }
+        &_main {
+            margin-bottom: vw(39);
+            font-size: 20px;
+        }
+    }
+}
+.color_text {
+    font-family: $Open_Sans_bold;
+     
+    &_second {
+        color: #19bd9a;
+    }
+}
