@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Diplom</title>
     <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./fonts/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="./fonts/pe-icon-social.css">
 </head>
 <body>
     <header class="page_header">
@@ -43,17 +45,15 @@
                     <div class="page_header__heading_main">We Are Code Cafe</div>
                     <div class="page_header__heading_secondary">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
                 </div>
-                <div class="page_header__icon section_icon">
-                    <svg class="icon icon_lg">
-                        <use xlink:href="svg/defs.svg#arrow-down-sign-to-navigate"/>
-                    </svg>
+                <div class="page_header__icon section_icon section_icon_first">
+                    <i class="pe-7s-angle-down icon"></i>
                 </div>
             </div>
         </div>
     </header>
     <section class="slider">
         <div class="slider_content container">
-            <div class="slider-heading section-heading section-heading_left container">
+            <div class="slider-heading section-heading section-heading_left">
                 <div class="slider-main section-heading__main">This is Bouncy</div>
                 <div class="slider-text section-heading__secondary">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </div>
                 <div class="slider__submit">
@@ -61,9 +61,9 @@
                 </div>
             </div>
             <div class="slider__images">
-                <div class="slider__images_first"></div>
-                <div class="slider__images_second"></div>
-                <div class="slider__images_third"></div>
+                <div class="slider__images_first slide"></div>
+                <div class="slider__images_second slide"></div>
+                <div class="slider__images_third slide"></div>
             </div>
         </div>
     </section>
@@ -74,63 +74,47 @@
                 <div class="section-heading__secondary">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
             </div>
             <div class="about__icons">
-                <div class="about__icon section_icon">
-                    <svg class="icon">
-                        <use xlink:href="./svg/defs.svg#heart"/>
-                    </svg>
+                <div class="about__icon section_icon section_icon_first">
+                    <i class="pe-7s-like icon"></i>
+                </div>
+                <div class="about__icon  section_icon about__icon_sz">
+                    <i class="pe-7s-mouse icon "></i>
                 </div>
                 <div class="about__icon section_icon">
-                    <svg class="icon">
-                        <use xlink:href="./svg/defs.svg#mouse"/>
-                    </svg>
-                </div>
-                <div class="about__icon section_icon">
-                    <svg class="icon">
-                        <use xlink:href="./svg/defs.svg#idea"/>
-                    </svg>
+                    <i class="pe-7s-light icon"></i>
                 </div>
             </div>
             <div class="about__info">
-                    <div class="about__info_text about__info_main">Creative Ideas</div>
+                    <div class="about__info_main">Creative Ideas</div>
                     <div class="about__info_text">
-                        <div class="about__text">At <b class="color_text color_text_second">vero</b> eos et accusamus et iusto odio dignissimos <b class="color_text">ducimus</b> qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores </div>
-                        <div class="about__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque <b class="color_text">corrupti quos</b> dolores et quas molestias <b class="color_text color_text_second">excepturi</b> sint occaecati cupiditate non provident, <b class="color_text">similique</b> sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r</div>
+                        <div class="about__text_first">At <b class="color_text color_text_second">vero</b> eos et accusamus et iusto odio dignissimos <b class="color_text">ducimus</b> qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores </div>
+                        <div class="about__text_second">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque <b class="color_text">corrupti quos</b> dolores et quas molestias <b class="color_text color_text_second">excepturi</b> sint occaecati cupiditate non provident, <b class="color_text">similique</b> sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r</div>
                     </div>
                 </div>
         </div>
     </section>
-    <section class="featured_work">
-        <div>
-            <div>FEATURED PROJECTS</div>
-            <div>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
-        </div>
-        <div>
-            <div>
-                <div>
-                    <img src="./Images/Layer_83.jpg" alt="">
+    <section class="feature">
+        <div class="feature_content">
+            <div class="feature_heading section-heading">
+                <div class="section-heading__main">FEATURED PROJECTS</div>
+                <div class="section-heading__secondary">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</div>
+            </div>
+            <div class="feature__images">
+                <div class="feature__image"></div>
+                <div class="feature__image_other">
+                    <div class="feature__image_first"></div>
+                    <div class="feature__image_new">vintage</div>
+                </div>
+                <div class="feature__image_other">
+                    <div class="feature__image_second"></div>
+                    <div class="feature__image_new">Branding</div>
                 </div>
             </div>
-            <div>
+            <div class="feature__info">
+                <div class="feature__info_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </div>
                 <div>
-                    <img src="./Images/Layer_14.jpg" alt="">
+                    <input type="submit" class="feature_submit submit" value="Submit Now">
                 </div>
-                <div><img src="./Images/Layer_17.jpg" alt=""></div>
-                <div>vintage</div>
-            </div>
-            <div>
-                <div>
-                    <img src="./Images/Layer_15.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./Images/Layer_18.jpg" alt="">
-                </div>
-                <div>Branding</div>
-            </div>
-        </div>
-        <div>
-            <div>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </div>
-            <div>
-                <input type="button" value="Submit Now">
             </div>
         </div>
     </section>

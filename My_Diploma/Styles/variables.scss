@@ -10,7 +10,13 @@ $Open_Sans_bold: 'Open Sans Bold';
 
     @return ($size/$test_screen_client_height)*100vw;
 }
-
+@keyframes image {
+	0%{opacity:0;}
+	10%{opacity:1;}
+	33% {opacity:1;}
+	43% {opacity:0;}
+	100%{opacity:0;}
+}
 $color_menu: #fff;
 
 
@@ -19,3 +25,19 @@ $color_text_2: #333b46;
 
 
 $background_color:#19bd9a;
+$background_color_2: #81868e;
+@mixin scale($width, $diff: 'less') {
+    $behaviour: max-width;
+    $screen-width: $width;
+
+    @if ($diff == 'less') {
+        $screen-width: $width - 1px;
+    }
+    @if ($diff == 'self-above') {
+        $behaviour: min-width;
+    }
+
+    @media screen and (#{$behaviour}: $screen-width) {
+        @content;
+    }
+}

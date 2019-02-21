@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-font-face {
+@font-face {
     font-family: $Roboto;
     src: local('Roboto'), local('Roboto-Regular'),
       url('./../fonts/Roboto.woff') format('woff'), 
@@ -48,6 +48,27 @@ font-face {
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Pe-icon-7-stroke';
+	src:url('./../fonts/Pe-icon-7-stroke.eot');
+	src:url('./../fonts/Pe-icon-7-stroke.eot') format('embedded-opentype'),
+		url('./../fonts/Pe-icon-7-stroke.woff') format('woff'),
+		url('./../fonts/Pe-icon-7-stroke.ttf') format('truetype'),
+		url('./../fonts/Pe-icon-7-stroke.svg#Pe-icon-7-stroke') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'pe-icon-social';
+	src:url('./../fonts/pe-icon-social.eot');
+	src:url('./../fonts/pe-icon-social.eot') format('embedded-opentype'),
+		url('./../fonts/pe-icon-social.woff') format('woff'),
+		url('./../fonts/pe-icon-social.ttf') format('truetype'),
+		url('./../fonts/pe-icon-social.svg#pe-icon-social') format('svg');
+	font-weight: normal;
+    font-style: normal;
+}
+
 
 * {
     box-sizing: border-box;
@@ -59,15 +80,17 @@ body {
 }
 .container {
     max-width: 1170px;
-    padding: 0 100px;
+    padding: 0 98px;
     margin: 0 auto;
 }
 
 .page_header {
-    background: url(./../Images/Layer_1.jpg) no-repeat 100%;
+    background: url(./../Images/Layer_1.jpg) no-repeat;
+    background-size: cover;
     padding-top: 40px;
-
-
+        &__wrapper {
+            padding: 0;
+        }
 
         &__logo {
             font-family: $big_john;
@@ -87,6 +110,7 @@ body {
         &__heading {
             color: $color_text;
             margin-bottom: vw(220);
+            text-align: center;
 
             &_main {
                 font-family: $Source_Sans;
@@ -99,31 +123,43 @@ body {
 
             &_secondary {
                 font-size: 16px;
-                letter-spacing: 0.8px;
                 line-height: 28px;
             }
         }
+
         &__icon {
-            border-radius: 50%;
-            background-color: $background_color;
-            padding: 7px;
             width: 36px;
+            height: 36px;
             margin: 0 auto;
-            cursor: pointer;
-        }  
+        }
+            
 }
 .icon {
-    fill: #fff;
-    stroke: inherit;
-    stroke-width: inherit;
-    width: 12px;
-    height: 12px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 35px;
+}
+.section_icon {
+    border-radius: 50%;
+    background-color: $background_color_2;
+    text-align: center;
+    
+    cursor: pointer;
+
+
+    &_first {
+        background-color: $background_color;
+    }
 }
 .menu {
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
+
+    &:last-child {
+        padding-right: 0;
+    }
 
 
     &_item {
@@ -168,17 +204,28 @@ body {
 
 }
 
+.slide {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: image 15s infinite;
+}
+
+
 .slider {
     &_content {
         display: flex;
-        padding-left: vw(57);
-        padding-top: vw(114);
-        padding-bottom: vw(101);
+        padding-left: vw(156);
+        padding-right: 0;
         position: relative;
         justify-content: flex-start;
     }
     &-heading {
-        width: 50%;
+        padding-top: vw(114);
+        width: 53%;
+        padding-right: 66px;
+        padding-bottom: vw(101);
     }
     &-main {
         margin-bottom: 49px;
@@ -188,26 +235,39 @@ body {
     }
     &__images {
         position: relative;
-        width: 50%;
-        min-height: 100%;
+        width: 460px;
         cursor: pointer;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-bottom: 57px;
 
         &_first {
-            background-image: url(./../Images/IPAD.png);
+            background: url(./../Images/IPAD.png) no-repeat;
+            width: 215px;
+            height: 350px;
+            left: 25%;
+            bottom: 0;
+            animation-delay: -5s;
+
         }
 
         &_second {
-            background-image: url(./../Images/Smart_Cover.png);
+            background: url(./../Images/Smart_Cover.png) no-repeat;
+            width: 192px;
+            height: 315px;
+            top: 0;
+            left: 25%;
+            animation-delay: -10s;
         }
         &_third {
-            background-image: url(./../Images/iMac.png);
+            background: url(./../Images/iMac.png) no-repeat;
+            width: 385px;
+            height: 309px;
+            top: 2%;
+            left: 0;
+            animation-delay: -15s;
         }
-    
     }
-
-    
-   
-
 }
 .submit {
     border-radius: 19px;
@@ -222,26 +282,67 @@ body {
 .about {
     background-color: #f3f3f3;
     &__content {
-       
-        padding: vw(80) vw(133) vw(101) vw(71);
+        padding: vw(80) vw(130) vw(101) vw(71);
     }
+
+    &_heading {
+        margin-bottom: vw(60);
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
 
         &_text {
             display: flex;
-            font-size: 16px;
-            letter-spacing: 0.8px;
-            line-height: 28px;
+            justify-content: space-between;
+            
 
-            &:first-child {
-                margin-right: 129px;
-            }
         }
         &_main {
             margin-bottom: vw(39);
             font-size: 20px;
+        }
+
+        &:not(:last-child) {
+            padding-right: vw(129);
+        }
+    }
+    &__text {
+        
+        &_first {
+            font-size: 16px;
+            letter-spacing: 0.8px;
+            line-height: 28px;
+            width: 35%;
+        }
+        &_second {
+            font-size: 14px;
+            letter-spacing: 0.7px;
+            line-height: 25px;
+            width: 55%;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: vw(61);
+
+    }
+
+    &__icon {
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        padding: 10px;
+
+        &_sz {
+            padding: 7px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 27px;
         }
     }
 }
@@ -250,5 +351,38 @@ body {
      
     &_second {
         color: #19bd9a;
+    }
+}
+
+//section feature
+
+.feature {
+
+    &_content {
+        padding-top: vw(80);
+
+    }
+
+    &_heading {
+        margin-bottom: vw(61);
+    }
+
+    &__images {
+        display: flex;
+        height: 319px;
+    }
+
+    &__image {
+        background: url(./../Images/Layer_83.jpg) no-repeat 100%;
+        width: 50%;
+
+        &_first {
+            background: url(./../Images/Layer_17.jpg) no-repeat 100%;
+            width: 25%;
+        }
+        &_second {
+            background: url(./../Images/Layer_18.jpg) no-repeat 100%;
+            width: 25%;
+        }
     }
 }
