@@ -138,13 +138,20 @@ body {
     color: #fff;
     font-size: 30px;
     line-height: 35px;
+
 }
 .section_icon {
+    width: 53px;
+    height: 53px;
     border-radius: 50%;
     background-color: $background_color_2;
     text-align: center;
-    
     cursor: pointer;
+    padding: 10px;
+
+    &_sz {
+        padding: 7px;
+    }
 
 
     &_first {
@@ -277,6 +284,13 @@ body {
     line-height: 12px;
     outline: 0;
     cursor: pointer;
+
+    &_lg {
+        border-color: #fff;
+        color: $color_text;
+        background-color: rgba(0,0,0,-0.5);
+        padding: 12px 25px;
+    }
 }
 
 .about {
@@ -332,14 +346,7 @@ body {
     }
 
     &__icon {
-        width: 53px;
-        height: 53px;
-        border-radius: 50%;
-        padding: 10px;
-
-        &_sz {
-            padding: 7px;
-        }
+       
 
         &:not(:last-child) {
             margin-right: 27px;
@@ -360,7 +367,6 @@ body {
 
     &_content {
         padding-top: vw(80);
-
     }
 
     &_heading {
@@ -370,19 +376,63 @@ body {
     &__images {
         display: flex;
         height: 319px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        font-family: $Source_Sans;
+        letter-spacing: 4px;
+        line-height: 12px;
     }
 
     &__image {
-        background: url(./../Images/Layer_83.jpg) no-repeat 100%;
+        background: url(./../Images/Layer_83.jpg) no-repeat center center;
+        background-size: cover;
         width: 50%;
 
-        &_first {
-            background: url(./../Images/Layer_17.jpg) no-repeat 100%;
+        &_two {
+            background: url(./../Images/Layer_17.jpg) no-repeat center center;
             width: 25%;
+            background-size: cover;
+            background-color: rgba(0,0,0,.7);
+            background-blend-mode: darken;
+            padding-top: vw(153);
+
+            &:hover {
+                background: url(./../Images/Layer_14.jpg) no-repeat center center;
+                background-size: cover;
+                width: 50%;
+
+            }
         }
-        &_second {
+        &_three {
             background: url(./../Images/Layer_18.jpg) no-repeat 100%;
             width: 25%;
+            background-size: cover;
+            background-color: rgba(0,0,0,.7);
+            background-blend-mode: darken;
+            padding-top: vw(153);
+
+            &:hover {
+                background: url(./../Images/Layer_15.jpg) no-repeat center center;
+                background-size: cover;
+                width: 50%;
+            }
+        }
+    }
+    &__info {
+        padding: vw(38) vw(170);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url(./../Images/Layer_85.png) no-repeat center center;
+        background-size: cover;
+        background-color: $background_color;
+        color: $color_text;
+        
+        &_text {
+            font-size: 20px;
+            letter-spacing: 0.8px;
         }
     }
 }
