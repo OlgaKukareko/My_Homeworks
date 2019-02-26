@@ -153,8 +153,7 @@ body {
         padding: 7px;
     }
 
-
-    &_first {
+    &:hover {
         background-color: $background_color;
     }
 }
@@ -335,6 +334,7 @@ body {
             letter-spacing: 0.7px;
             line-height: 25px;
             width: 55%;
+            text-align: justify;
         }
     }
 
@@ -434,5 +434,73 @@ body {
             font-size: 20px;
             letter-spacing: 0.8px;
         }
+    }
+}
+//section services
+.services {
+    &__wrapper {
+        padding-top: vw(81);
+        padding-bottom: vw(137);
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &_heading {
+        margin-bottom: vw(61);
+    }
+
+    &__info {
+        width: 50%;
+        display: flex;
+
+        &_skills {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;  
+
+            &:not(:last-child) {
+            margin-right: vw(45);
+            }
+        }
+    }
+
+    &__text {
+        flex-direction: column;
+        margin-right: vw(88);
+        &_title {
+            margin-bottom: 34px;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 0.8px;
+        }
+        &_main {
+            &_line {
+                &:not(:last-child) {
+                    margin-bottom: vw(41);
+                }
+            }
+        }
+    }
+    &__icons {
+        margin-right: 44px;
+    }
+    &__icon {
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+        
+    }
+}
+.info {
+    &_percent {
+        width: 120px;
+        height: 120px;
+        border: 5px solid #19bd9a;
+        border-radius: 50%;
+        border-right-color: #047378;
+        margin: 45px auto;
+        text-align: center;
     }
 }
