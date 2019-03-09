@@ -23,7 +23,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.pe-7s-angle-right:before {
+	content: "\e684";
+}
 .pe-7s-angle-down:before {
 	content: "\e688";
 }
@@ -62,4 +64,7 @@
 }
 .pe-7s-call:before {
 	content: "\e670";
+}
+.pe-7s-link:before {
+	content: "\e641";
 }
