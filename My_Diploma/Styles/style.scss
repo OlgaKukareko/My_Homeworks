@@ -962,7 +962,7 @@ body {
         justify-content: center;
         background: url(./../Images/Layer_101.png) no-repeat;
         background-size: cover;
-        height: vw(200);
+        height: 200px;
         background-color: $background_color;
         color: $color_text;
 
@@ -1219,7 +1219,7 @@ body {
 
     &__question {
         $question: &;
-        height: vw(201);
+        height: 201px;
         background: url(./../Images/Layer_104.png) no-repeat center center;
         background-size: cover;
         background-color: #000;
