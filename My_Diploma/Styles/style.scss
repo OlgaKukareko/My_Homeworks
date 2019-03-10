@@ -768,8 +768,8 @@ body {
         }
 
         &_second {
-            border-top-color: transparent;
-            transform: rotate(45deg);
+            clip: rect(0px 100px 200px 0px);
+            transform: rotate(317deg);
         }
 
         &_third {
