@@ -44,13 +44,23 @@
 }
 
 @font-face {
-    font-family: $big_john;
-    src:
-        url('./../fonts/BIG_JOHN.woff') format('woff');
-    font-weight: normal;
+    font-family: $Big_John_Bold;
+    src: local('Big John PRO Bold'), local('Big-John-PRO-Bold'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.woff2') format('woff2'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.woff') format('woff'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
-}
-
+  }
+  @font-face {
+    font-family: $Big_John_Regular;
+    src: local('Big John PRO Regular'), local('Big-John-PRO-Regular'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.woff2') format('woff2'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.woff') format('woff'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
 @font-face {
     font-family: 'Pe-icon-7-stroke';
     src: url('./../fonts/Pe-icon-7-stroke.eot');
@@ -95,7 +105,7 @@ body {
 }
 
 .logo {
-    font-family: $big_john;
+    font-family: $Big_John_Bold;
     font-size: 25px;
     color: $color_menu;
 }
@@ -199,10 +209,11 @@ body {
     &_item {
         list-style-type: none;
         padding: 9px 22px;
+        border: transparent solid 1px;
 
         &:hover {
             border-radius: 25px;
-            border: $color_menu solid 1px;
+            border-color: $color_menu;
         }
     }
 
@@ -220,7 +231,7 @@ body {
         font-family: $Source_Sans;
         font-size: 20px;
         letter-spacing: 4px;
-        margin-bottom: vw(41);
+        margin-bottom: 41px;
         text-transform: uppercase;
         color: #333b46;
 
@@ -317,11 +328,9 @@ body {
 
     &__images {
         position: relative;
-        width: vw(460);
+        width: 50%;
         cursor: pointer;
-        margin-top: 10px;
-        margin-left: 0;
-        margin-bottom: 57px;
+    
 
         @include scale(700) {
             text-align: center;
@@ -337,8 +346,8 @@ body {
             background-size: cover;
             width: vw(215);
             height: vw(350);
-            left: 25%;
-            bottom: 0;
+            left: 20%;
+            top: 20%;
             animation-delay: -5s;
 
             @include scale(700) {
@@ -353,7 +362,7 @@ body {
             width: vw(192);
             height: vw(315);
             background-size: cover;
-            top: 0;
+            top: 20%;
             left: 25%;
             animation-delay: -10s;
 
@@ -368,7 +377,7 @@ body {
             background-size: cover;
             width: vw(385);
             height: vw(309);
-            top: 2%;
+            top: 20%;
             left: 0;
             animation-delay: -15s;
 
@@ -388,6 +397,7 @@ body {
     line-height: 12px;
     outline: 0;
     cursor: pointer;
+    
 
     &_lg {
         border-color: #fff;
@@ -551,6 +561,8 @@ body {
                 background: url(./../Images/Layer_14.jpg) no-repeat center center;
                 background-size: cover;
                 width: 50%;
+                transition: all 0.5s ease-out;
+
 
             }
         }
@@ -573,6 +585,8 @@ body {
                 background: url(./../Images/Layer_15.jpg) no-repeat center center;
                 background-size: cover;
                 width: 50%;
+                transition: all 0.5s ease-out;
+
             }
         }
     }
@@ -1155,7 +1169,7 @@ body {
         opacity: 0.7;
         width: 100%;
         height: 100%;
-        background-color: gray;
+        background-color:rgba(0, 0, 0, 1);
         border-radius: 50%;
         padding-top: 7px;
     }
@@ -1493,7 +1507,6 @@ body {
         position: relative;
         overflow: hidden;
         width: 234px;
-        z-index: 1;
 
         &:hover {
             #{$self}_part {
@@ -1502,6 +1515,8 @@ body {
 
             #{$self}_text {
                 display: block;
+                top: 0;
+                transition: all .5s;
             }
         }
 
@@ -1541,10 +1556,8 @@ body {
             width: 100%;
             height: 100%;
             position: absolute;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            top: 0;
+            background-color: #fff;
+            
 
             &_list {
                 color: #81868e;
@@ -1639,7 +1652,7 @@ body {
             border: 1px solid #81868e;
             color: $color_text;
             background-color: rgba(0, 0, 0, -0.5);
-            padding: vw(15) vw(243) vw(15) vw(23);
+            padding: 15px vw(243) 15px 23px;
             margin-right: 9px;
             outline: none;
 
@@ -1653,7 +1666,7 @@ body {
         }
 
         &_submit {
-            padding: vw(15) vw(50);
+            padding: 15px 50px;
             background-color: #19bd9a;
             border: none;
             color: #fff;
@@ -1669,6 +1682,7 @@ body {
 
             &_input {
                 margin-bottom: 10px;
+                width: 90%;
             }
         }
     }

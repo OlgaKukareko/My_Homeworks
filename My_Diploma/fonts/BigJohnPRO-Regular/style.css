@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Big John PRO';
+    src: local('Big John PRO Regular'), local('Big-John-PRO-Regular'),
+        url('BigJohnPRO-Regular.woff2') format('woff2'),
+        url('BigJohnPRO-Regular.woff') format('woff'),
+        url('BigJohnPRO-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
