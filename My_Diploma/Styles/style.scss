@@ -1514,7 +1514,8 @@ body {
             #{$self}_text {
                 display: block;
                 top: 0;
-                transition: all .5s;
+                transition: all 3s;
+
             }
         }
 
@@ -1922,6 +1923,7 @@ body {
     &:hover {
         #{$map}_content {
             display: none;
+            transition-duration: 2s;
         }
     }
 }

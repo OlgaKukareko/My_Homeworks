@@ -1286,8 +1286,8 @@ body {
     .price__card:hover .price__card_text {
       display: block;
       top: 0;
-      -webkit-transition: all .5s;
-      transition: all .5s; }
+      -webkit-transition: all 3s;
+      transition: all 3s;}
     .price__card:not(:last-child) {
       margin-right: 5.46875vw; }
     .price__card_name {
@@ -1638,7 +1638,9 @@ body {
     border-radius: 50%;
     color: #fff; }
   .map:hover .map_content {
-    display: none; }
+    display: none;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s; }
 
 .footer_content {
   display: -webkit-box;
