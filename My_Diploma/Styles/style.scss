@@ -108,6 +108,7 @@ body {
     font-family: $Big_John_Bold;
     font-size: 25px;
     color: $color_menu;
+    text-transform: uppercase;
 }
 
 .page_header {
@@ -245,7 +246,7 @@ body {
         font-size: 14px;
         letter-spacing: 0.7px;
         line-height: 25px;
-        width: vw(457);
+        width: 100%;
         margin: 0 auto;
         color: #81868e;
 
@@ -395,6 +396,7 @@ body {
     padding: 12px 30px;
     font-size: 16px;
     line-height: 12px;
+    background-color: transparent;
     outline: 0;
     cursor: pointer;
     
@@ -1116,8 +1118,6 @@ body {
     &__image {
         $image: &;
         position: relative;
-        width: vw(285);
-        height: vw(364);
         display: flex;
 
         &:hover {
@@ -1128,8 +1128,6 @@ body {
 
         @include scale(870) {
             justify-content: center;
-            width: 90%;
-            height: 50%;
             order: 1;
         }
 

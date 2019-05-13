@@ -51,11 +51,24 @@
   font-weight: normal;
   font-style: normal; }
 
-@font-face {
-  font-family: "Big John";
-  src: url("./../fonts/BIG_JOHN.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  @font-face {
+    font-family: 'Big John PRO Bold';
+    src: local('Big John PRO Bold'), local('Big-John-PRO-Bold'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.woff2') format('woff2'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.woff') format('woff'),
+        url('../fonts/BigJohnPRO-Bold/BigJohnPRO-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Big John PRO Regular';
+    src: local('Big John PRO Regular'), local('Big-John-PRO-Regular'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.woff2') format('woff2'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.woff') format('woff'),
+        url('../fonts/BigJohnPRO-Regular/BigJohnPRO-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
 
 @font-face {
   font-family: 'Pe-icon-7-stroke';
@@ -203,7 +216,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.7px;
     line-height: 25px;
-    width: 35.70312vw;
+    width: 100%;
     margin: 0 auto;
     color: #81868e; }
     @media screen and (max-width: 699px) {
@@ -960,8 +973,6 @@ body {
 
 .team__image {
   position: relative;
-  width: 22.26562vw;
-  height: 28.4375vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -972,8 +983,6 @@ body {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 90%;
-      height: 50%;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1; } }
